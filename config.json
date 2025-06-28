@@ -1,0 +1,12 @@
+{
+    "name": "PAUL-MD",
+    "description": "PAUL-MD Bot",
+    "start": {
+        "command": "pm2 start ecosystem.config.js",
+        "schedule": "0 * * * *"
+    },
+    "environment": {
+        "NODE_ENV": "production",
+        "PORT": "9699"
+    }
+}

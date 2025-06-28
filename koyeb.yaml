@@ -1,0 +1,14 @@
+name: paul-md
+services:
+  bot:
+    type: container
+    image: node:20
+    ports:
+      - 9699:9699
+    env:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "9699"
+    commands:
+      - pm2 start ecosystem.config.js

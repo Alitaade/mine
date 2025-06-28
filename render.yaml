@@ -1,0 +1,16 @@
+name: paul-md
+region: oregon
+services:
+  bot:
+    env:
+      PORT: 9699
+      NODE_ENV: production
+    docker:
+      - node:20
+    pm2:
+      ecosystemConfig:
+        apps:
+          - script: index.js
+            instances: max
+            exec_mode: cluster
+            max_memory_restart: "50000M"
