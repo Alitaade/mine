@@ -100,7 +100,7 @@
         "steno": "^1.0.0",
         "translate-google-api": "^1.0.4",
         "unzipper": "^0.12.2",
-        "yargs": "latest",
+        "yargs": "17.7.2",
         "youtube-captions-scraper": "latest",
         "youtube-yts": "^2.0.0",
         "youtubedl-core": "^4.11.5",
@@ -109,7 +109,8 @@
         "ytmusic-api": "latest",
         "ytsr": "latest",
         "youtube-dl-exec": "latest",
-        "zip-a-folder": "latest"
+        "zip-a-folder": "latest",
+        "css-select": "5.1.0"
     },
     "devDependencies": {
         "typescript": "^5.3.3"
