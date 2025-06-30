@@ -11,7 +11,7 @@
     },
     "scripts": {
         "build": "npm install",
-        "vercel-build": "npm install",
+        "vercel-build": "npm ci",
         "start": "node index.js",
         "dev": "node index.js",
         "postinstall": "node -e \"console.log('Installation complete')\""
