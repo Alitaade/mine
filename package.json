@@ -10,15 +10,13 @@
         "media": "XeonMedia"
     },
     "scripts": {
-        "prepare": "rm -rf /home/container/.cache/yarn && /home/container/logs || true",
         "postsetup": "node index.js",
         "start": "NODE_OPTIONS=--max_old_space_size=900000 pm2 start ecosystem.config.js --no-daemon --no-autorestart",
         "start:daemon": "NODE_OPTIONS=--max_old_space_size=900000 pm2 start ecosystem.config.js",
         "start:dev": "node index.js",
         "stop": "pm2 stop PAUL-MD",
         "restart": "pm2 restart PAUL-MD --force",
-        "logs": "pm2 logs PAUL-MD --lines 100",
-        "clean": "node -e \"require('fs').rmdirSync('.pm2', {recursive: true, force: true})\""
+        "logs": "pm2 logs PAUL-MD --lines 100"
     },
     "env": {
         "NODE_ENV": "production",
