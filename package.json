@@ -10,16 +10,11 @@
         "media": "XeonMedia"
     },
     "scripts": {
-        "build": "npm config set legacy-peer-deps true && npm install --legacy-peer-deps",
-        "vercel-build": "npm config set legacy-peer-deps true && npm install --legacy-peer-deps",
-        "postsetup": "node index.js",
+        "build": "npm install",
+        "vercel-build": "npm install",
         "start": "node index.js",
-        "start:prod": "NODE_OPTIONS=--max_old_space_size=900000 node index.js --no-daemon --no-autorestart",
-        "start:daemon": "NODE_OPTIONS=--max_old_space_size=900000 pm2 start ecosystem.config.js",
-        "start:dev": "node index.js",
-        "stop": "pm2 stop PAUL-MD",
-        "restart": "pm2 restart PAUL-MD --force",
-        "logs": "pm2 logs PAUL-MD --lines 100"
+        "dev": "node index.js",
+        "postinstall": "node -e \"console.log('Installation complete')\""
     },
     "env": {
         "NODE_ENV": "production",
