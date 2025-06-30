@@ -9,12 +9,16 @@
         "src": "src",
         "media": "XeonMedia"
     },
-    "scripts": {
-        "build": "npm install",
-        "start": "node index.js",
-        "dev": "node index.js",
-        "postinstall": "node -e \"console.log('Installation complete')\""
-    },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "NODE_ENV=development node index.js",
+    "pm2:start": "START_METHOD=pm2 node index.js",
+    "pm2:stop": "pm2 delete paul-md || true",
+    "pm2:logs": "pm2 logs paul-md",
+    "pm2:restart": "pm2 restart paul-md",
+    "health": "curl -f http://localhost:9699/health || exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
     "env": {
         "NODE_ENV": "production",
         "PORT": "9699"
