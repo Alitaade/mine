@@ -1,29 +1,16 @@
 #!/bin/bash
 
-# Build script for WhatsApp Bot deployment
+# Vercel build script for WhatsApp Bot
 set -e
 
-echo "🔨 Starting build process..."
+echo "🔨 Starting Vercel build process..."
 
-# Update system packages
-echo "📦 Updating system packages..."
-apt-get update && apt-get install -y \
-    git \
-    python3 \
-    make \
-    g++ \
-    libvips-dev \
-    ffmpeg \
-    wget \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
-
-# Set npm configuration
-echo "⚙️ Configuring npm..."
+# Set npm configuration for dependency conflicts
+echo "⚙️ Configuring npm for Vercel..."
 npm config set legacy-peer-deps true
 
-# Install dependencies
+# Install dependencies with legacy peer deps
 echo "📋 Installing dependencies..."
-npm install --legacy-peer-deps --force
+npm install --legacy-peer-deps
 
-echo "✅ Build completed successfully!"
+echo "✅ Vercel build completed successfully!"
