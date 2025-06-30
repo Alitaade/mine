@@ -19,8 +19,8 @@ const CONFIG = {
     SESSION_PATH: process.env.SESSION_PATH || './session/creds.json',
     PORT: parseInt(process.env.PORT) || 9699,
     START_METHOD: (process.env.START_METHOD || 'direct').toLowerCase(),
-    KEEP_ALIVE_INTERVAL: parseInt(process.env.KEEP_ALIVE_INTERVAL) || 25, // minutes
-    MAX_RESTARTS: parseInt(process.env.MAX_RESTARTS) || 5,
+    KEEP_ALIVE_INTERVAL: parseInt(process.env.KEEP_ALIVE_INTERVAL) || 5, // minutes
+    MAX_RESTARTS: parseInt(process.env.MAX_RESTARTS) || 7,
     RESTART_DELAY: parseInt(process.env.RESTART_DELAY) || 2000, // milliseconds
     SERVER_TIMEOUT: parseInt(process.env.SERVER_TIMEOUT) || 300000, // 5 minutes
     HEALTH_CHECK_PORT: parseInt(process.env.HEALTH_CHECK_PORT) || CONFIG.PORT,
